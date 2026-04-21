@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'TU_REPO'
-            }
-        }
 
         stage('Install dependencies') {
             steps {
@@ -16,7 +11,7 @@ pipeline {
 
         stage('Run app') {
             steps {
-                sh 'nohup python app.py &'
+                sh 'python3 app.py'
             }
         }
     }
