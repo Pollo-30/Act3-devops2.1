@@ -1,8 +1,11 @@
 pipeline {
     agent any
 
-    stages {
+    environment {
+        PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    }
 
+    stages {
         stage('Clonar repo') {
             steps {
                 git branch: 'main', url: 'https://github.com/Pollo-30/Act3-devops2.1.git'
