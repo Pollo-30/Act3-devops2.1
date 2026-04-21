@@ -6,8 +6,8 @@ app = Flask(__name__)
 def home():
     return """
 ┌───────────────────────────────┐
-│        Victor Alejandro        │
-│           versión 2.2          │
+│        ACT HUGO       │
+│           versión 1.1          │
 └───────────────────────────────┘
 """
 
